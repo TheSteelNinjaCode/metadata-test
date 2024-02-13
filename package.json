@@ -1,0 +1,33 @@
+{
+  "name": "metadata-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "prisma generate",
+    "tailwind": "tailwindcss -i ./src/app/css/tailwind.css -o ./src/app/css/styles.css --minify --watch",
+    "browser-sync": "browser-sync start --config settings/bs-config.cjs",
+    "dev": "npm-run-all --parallel browser-sync tailwind"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@prisma/client": "^5.9.1",
+    "@types/node": "^20.11.17",
+    "autoprefixer": "^10.4.17",
+    "daisyui": "^4.7.1",
+    "http-proxy-middleware": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.35",
+    "prisma": "^5.9.1",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "type": "module",
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
